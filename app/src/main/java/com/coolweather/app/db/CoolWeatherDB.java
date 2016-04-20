@@ -80,7 +80,7 @@ public class CoolWeatherDB {
                 province.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 province.setProvinceName(cursor.getString(cursor
                         .getColumnIndex("province_name")));
-                province.setProvinceName(cursor.getString(cursor
+                province.setProvinceCode(cursor.getString(cursor
                         .getColumnIndex("province_code")));
                 list.add(province);
             } while (cursor.moveToNext());
@@ -119,7 +119,7 @@ public class CoolWeatherDB {
                 city.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 city.setCityName(cursor.getString(cursor
                         .getColumnIndex("city_name")));
-                city.setCityName(cursor.getString(cursor
+                city.setCityCode(cursor.getString(cursor
                         .getColumnIndex("city_code")));
                 city.setProvinceId(provinceId);
                 list.add(city);
@@ -160,7 +160,7 @@ public class CoolWeatherDB {
                 county.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 county.setCountyName(cursor.getString(cursor
                         .getColumnIndex("county_name")));
-                county.setCountyName(cursor.getString(cursor
+                county.setCountyCode(cursor.getString(cursor
                         .getColumnIndex("county_code")));
                 county.setCityId(cityId);
                 list.add(county);
